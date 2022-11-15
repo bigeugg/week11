@@ -27,19 +27,33 @@
 
 // greet();
 
-let r = prompt("Enter a radius."); //Gives us the pop up of "Enter a radius"
+// let r = prompt("Enter a radius."); //Gives us the pop up of "Enter a radius"
 
-function circleArea (radius)
+// function circleArea (radius)
+// {
+//     const radiusP = document.querySelector("#radius");
+//     const resultP = document.querySelector("#result");
+//     radiusP.textContent = radius;
+//     let calculatedArea = Math.PI * radius * radius;
+//     resultP.textContent = calculatedArea;
+//     return calculatedArea;
+// }
+
+// let area = circleArea(r).toFixed(2); //'let area' stores the values of r (which was what the user inputted), the .toFixed rounds the decimal point
+
+// alert(`The area of the circle with radius ${r} is ${area}`) //alerts the output
+
+const unorderedList = document.querySelector(".shopping");
+
+function populateList(list)
 {
-    const radiusP = document.querySelector("#radius");
-    const resultP = document.querySelector("#result");
-    radiusP.textContent = radius;
-    let calculatedArea = Math.PI * radius * radius;
-    resultP.textContent = calculatedArea;
-    return calculatedArea;
+    for (let i = 0; i < list.length; i++) 
+    {
+        let listItem = document.createElement("li");
+        listItem.textContent = list[i]
+        unorderedList.appendChild(listItem);
+    }
 }
 
-let area = circleArea(r).toFixed(2); //'let area' stores the values of r (which was what the user inputted), the .toFixed rounds the decimal point
-
-alert(`The area of the circle with radius ${r} is ${area}`) //alerts the output
-
+const shoppingList = ["cheese", "bread", "green pepper"];
+    populateList(shoppingList);
