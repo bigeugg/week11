@@ -57,3 +57,11 @@ function populateList(list)
 
 const shoppingList = ["cheese", "bread", "green pepper"];
     populateList(shoppingList);
+
+function changeListSytle()
+{
+    unorderedList.classList.remove("circleList");
+    unorderedList.classList.add("squareList");
+}
+
+changeListSytle()
